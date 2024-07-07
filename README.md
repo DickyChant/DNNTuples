@@ -21,6 +21,12 @@ cd DeepNTuples/Ntupler/test
 cmsRun AK4PFJetsHI.py #
 ```
 
+## Current limitation
+1. First output of such: https://root.cern/js/latest/?file=https://sqian.web.cern.ch/sqian/first_HI_dnntupler.root 
+2. SV infomation screwed up
+3. B definition not working...
+4. GenParticles not good?
+
 ## Submit jobs via CRAB
 
 **Step 0**: switch to the crab production directory and set up grid proxy, CRAB environment, etc.
