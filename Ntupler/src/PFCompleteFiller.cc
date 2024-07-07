@@ -37,7 +37,7 @@ void PFCompleteFiller::book() {
   data.addMulti<float>("pfcand_phirel");
   data.addMulti<float>("pfcand_etarel");
   // data.addMulti<float>("pfcand_deltaR");
-  data.addMulti<float>("pfcand_puppiw");
+  // data.addMulti<float>("pfcand_puppiw");
   data.addMulti<float>("pfcand_abseta");
 
   data.addMulti<float>("pfcand_drminsvin"); // restricted to within the jet cone
@@ -124,7 +124,7 @@ bool PFCompleteFiller::fill(const pat::Jet& jet, size_t jetidx, const JetHelper&
     // data.fillMulti<float>("pfcand_deltaR", reco::deltaR(*packed_cand, jet));
     data.fillMulti<float>("pfcand_abseta", std::abs(packed_cand->eta()));
 
-    data.fillMulti<float>("pfcand_puppiw", jet_helper.getPuppiWeight(cand));
+    // data.fillMulti<float>("pfcand_puppiw", jet_helper.getPuppiWeight(cand));
 
     double minDRin = 2.*jetR_;
     for (const auto &sv : *SVs){
