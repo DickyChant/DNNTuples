@@ -2,15 +2,23 @@
 
 ## Setup
 ```
-# use CMSSW_12_3_1
-cmsrel CMSSW_12_3_1
-cd CMSSW_12_3_1/src
+# use CMSSW_13_2_11
+cmsrel CMSSW_13_2_11
+cd CMSSW_13_2_11/src
 cmsenv
 
+# Set up upon Andre's repo 
+
+git cms-merge-topic stahlleiton:HiForest_TTbar 
+
+
 # clone this repo into "DeepNTuples" directory
-git clone git@github.com:hqucms/DNNTuples.git DeepNTuples -b dev/ak4/Run3/12_4_X
+git clone git@github.com:dickychant/DNNTuples.git DeepNTuples -b dev/ak4/Run3HI/13_2_X
 
 scram b -j8
+
+cd DeepNTuples/Ntupler/test
+cmsRun AK4PFJetsHI.py #
 ```
 
 ## Submit jobs via CRAB
